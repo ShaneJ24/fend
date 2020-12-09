@@ -1,7 +1,8 @@
-import { checkForName } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { validateURL } from './js/urlChecker'
+import { handleSubmit, postData } from './js/formHandler'
 
-console.log(checkForName);
+//document.getElementById("results").innerHTML=newData;
+alert("Hi! This is my natural language app");
+console.log("I am working!");
 
-alert("I EXIST")
-console.log("CHANGE!!");
+export { validateURL, handleSubmit};
