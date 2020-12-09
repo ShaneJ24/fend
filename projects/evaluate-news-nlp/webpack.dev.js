@@ -1,18 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
     entry: './src/client/index.js',
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
-    output: {
-        libraryTarget: 'var',
-        library: 'Client'
-    },
     module: {
         rules: [
             {
@@ -35,7 +30,6 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
-        }),
-        new WorkboxPlugin.GenerateSW()
+        })
     ]
 }
